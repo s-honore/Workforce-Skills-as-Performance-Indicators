@@ -1,1 +1,1 @@
-Repository containing code and data for applications of machine learning in economics}
+Repository containing code and data for applications of machine learning in economics
