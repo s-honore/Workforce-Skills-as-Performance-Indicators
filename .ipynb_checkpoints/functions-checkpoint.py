@@ -1,5 +1,6 @@
 def firm_name(df):
     import numpy as np
+    import pandas as pd
     lolland_list = ['Aktieselskabet Lollands Bank',
     'A/S Lollands Bank Vordingborg Filial',
     'Lollands Bank',
@@ -17,14 +18,7 @@ def firm_name(df):
     'Lundbeck Institute',
     'H LUNDBECK A/S',
     'Lundbeckfond Invest A/S',
-    'Lundbeckfonden / LFI a/s',
-    'ALK-Abelló A/S',
-    'Alk-Abelló A/S',
-    'ALK-Abelló',
-    'ALK-Abello',
-    'Alk-Abello A/S',
-    'ALK-Abello A/S',
-    'ALK-abelló']
+    'Lundbeckfonden / LFI a/s']
 
     luxor_list = ['Investeringsselskabet Luxor A/S', ]
 
@@ -163,7 +157,7 @@ def firm_name(df):
     'Netcompany A/S',
     'NETCOMPANY A/S']
 
-    nilfisk_list = [['Nilfisk A/S',
+    nilfisk_list = ['Nilfisk A/S',
     'Nilfisk',
     'Nilfisk Group',
     'Nilfisk-Advance Nordic A/S',
@@ -180,7 +174,7 @@ def firm_name(df):
     'Nilfisk - Advance A/S',
     'Nilfisk-ALTO A/S',
     'Nilfisk-ALTO',
-    'Nilfisk - ALTO']]
+    'Nilfisk - ALTO']
 
     NKT_list = ['NKT (Denmark) A/S',
     'NKT A/S',
@@ -723,25 +717,31 @@ def firm_name(df):
     'Ørsted Radius, B2C & CityLight',
     'Ørsted Wind Power ? Partnerships & Asset Management',
     'Ørsted ? Radius, B2C & CityLight']
-    
+
     list_of_names = ['Ørsted', 'Zealand Pharma', 'Vestjysk Bank', 'Vestas Wind Systems', 'Tryg', 'Totalbanken', 'TORM A', 'Topdanmark', 'Tivoli A/S', 'TCM Group', 'Sydbank', 
     'Sparekassen Sjælland-Fyn', 'Spar Nord Bank', 'SP Group', 'Solar B', 'Skjern Bank', 'SKAKO', 'Schouw & Co.', 'Scandinavian Tobacco Group', 'Scandinavian Brake Systems',
     'SAS', 'Sanistål', 'RTX', 'Royal UNIBREW', 'Rovsing', 'Rockwool Int. B', 'Roblon B', 'Ringkjøbing Landbobank', 'Rias B', 'Per Aarsleff Holding B',
     'Park Street Nordicom A', 'Pandora', 'Orphazyme', 'Novo Nordisk B', 'NTR Holding B', 'NTG Nordic Transport Group', 'Novozymes B', 'North Media', 'Nordfyns Bank',
-    'Nordea Bank Abp', 'NNIT', 'NKT', 'Nilfisk Holding', 'Netcompany Group', 'Møns Bank', 'MT Højgaard Holding', 'Migatronic B', 'Matas', 'Lån og Spar Bank', 'Luxor B',
+    'Nordea Bank Abp','NNIT', 'NKT', 'Nilfisk Holding', 'Netcompany Group', 'Møns Bank', 'MT Højgaard Holding', 'Migatronic B', 'Matas', 'Lån og Spar Bank', 'Luxor B',
     'Lundbeck', 'Lollands Bank']
 
     list_of_lists = [oersted_list, zealand_pharma_list, vestjysk_list, vestas_list, tryg_list, totalbanken_list, torm_list, topdanmark_list, tivoli_list, tcm_list, sydbank_list,
     sparekassen_list, sparnord_list, sp_group_list, solar_list, skjern_list, skako_list, schouw_list, scandinavian_list, brakesystem_list, sas_list, sani_list, rtx_list,
     royal_list, rovsing_list, rockwool_list, roblon_list, ringbank_list, rias_list, aarslef_list, nordicom_list, pandora_list, orphazyme_list, novo_list,ntr_list,
-    ntg_list, novozym_list, northmedia_list, nordfyns_list, nnit_list, NKT_list,nilfisk_list, netcompany_list, mon_bank_list, mt_hojgaard_list,miga_list, matas_list, laan_spar_list,
-    luxor_list, lundbeck_list, lolland_list]
+    ntg_list, novozym_list, northmedia_list, nordfyns_list, nordea_list, nnit_list, NKT_list,nilfisk_list, netcompany_list, mon_bank_list, mt_hojgaard_list,miga_list, matas_list,
+    laan_spar_list,luxor_list, lundbeck_list, lolland_list]
+
+    list_of_dfs = []
     
-    for firm_list, firm_name in zip(list_of_lists, list_of_names):
-        df['real_firm_name'] = np.where(df.firma.isin(firm_list) == True
-                                   , firm_name
+    for list_, name_ in zip(list_of_lists, list_of_names):
+        temp = df.copy()
+        
+        temp['real_firm_name'] = np.where(temp.firma.isin(list_) == True
+                                   , name_
                                    , 'delete')
 
-        #df = df[df.real_firm_name != 'delete'].drop_duplicates('ID')
+        temp = temp[temp.real_firm_name != 'delete'].drop_duplicates('ID')
+        
+        list_of_dfs.append(temp)
     
-    return df
+    return pd.concat(list_of_dfs)
