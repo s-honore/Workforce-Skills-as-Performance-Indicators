@@ -718,18 +718,667 @@ def firm_name(df):
     'Ørsted Wind Power ? Partnerships & Asset Management',
     'Ørsted ? Radius, B2C & CityLight']
 
+    Københavns_Lufthavne_list = ['Københavns Lufthavne A/S'
+                         ,'Københavns Lufthavn'
+                         ,'Københavns Lufthavne (CPH)'
+                         ,"Københavns lufthavne"
+                         ,'Copenhagen Airport Hotels A/S'
+                         ,'COPENHAGEN AIRPORT HOTEL ApS'
+                         ,"COPENHAGEN AIRPORTS INTERNATIONAL A/S"
+                         ,"Københavns Lufthavne A/S, Hrm"]
+
+    Kreditbanken_list = ['Kreditbanken A/S'
+               ,'Kreditbanken A/S Sønderborg'
+               ,'Kreditbanken A/S Tønder'
+               ,'Kreditbanken'
+               ,'Kreditbanken i Sønderborg'
+               ,'KREDITBANKEN A/S']
+
+
+    Jyske_Bank_list = ['Jyske Bank'
+                  ,'Jyske Finans'
+                  ,'JYSKE FINANS A/S'
+                  ,'Jyske Invest']
+
+    Jutlander_Bank_list = ['Jutlander Bank A/S'
+                      ,'Jutlander Bank'
+                      ,'Jutlander Bank AS'
+                      ,'JUTLANDER BANK A/S'
+                      ,' Jutlander Bank A/S']
+
+    Jeudan_list = ['Jeudan A/S'
+              ,'Jeudan'
+              ,'JEUDAN A/S'
+              ,'Jeudan Servicepartner A/S'
+              ,'JEUDAN SERVICEPARTNER A/S'
+              ,'Jeudan Servicepartner']
+
+    ISS_list = ['ISS A/S'
+           ,'ISS World Services A/S'
+           ,'ISS World'
+           ,'ISS Facility Services A/S'
+           ,'ISS Facility Services AS'
+           ,'Personalehuset - Part of ISS Facility Services A/S'
+           ,'HR afd. i ISS Facility Services A/S'
+           ,'Medarbejderfond for ansatte i ISS Facility Services A/S'
+           ,'ISS FACILITY SERVICES A/S'
+           ,'ISS Facility Services A/S Fredericia Sygehus'
+           ,'ISS Facility Services'
+           ,'ISS Facility Service'
+           ,'ISS Facility Service A/S Rexam Galss Holmegaard A/S'
+           ,'Iss Facility Services A/S'
+          ,'ISS Facility Services A/S Rødby Færge'
+         ,'ISS Facility Services A/S CSC Scandihealth A/S'
+         ,'ISS Facility Services A/S Rexam Glass Holmegaard A/S'
+         ,'ISS Facility Services A/S Salg'
+         ,'ISS Facility Services A/S - El-Partners'
+         ,'ISS Facility Services A/S Kolding Sygehus'
+         ,'ISS Facility Services A/S Ringsted Sygehus'
+         ,'Hørsholm Hospital, ISS Facility Services'
+        ,'Hørsholm Hospital, ISS Facility Services'
+         ,'ISS Facility Services A/S Office Support'
+         ,'ISS Facillity Services A/S'
+         ,'ISS Facility Service A/S'
+         ,'ISS Facility Services A/S Sønderborg Sygehus'
+         ,'ISS Facility Services A/S Aabenraa Sygehus'
+         ,'ISS Facility Services A/S Bilka'
+         ,'ISS Facility Services A/S Haderslev sygehus'
+         ,'Iss Facility Services'
+           ,'ISS Services A/S']
+
+    InterMail_list = ['Intermail Danmark A/S'
+                 ,'InterMail'
+                 ,'InterMail A/S'
+                 ,'InterMail Solutions A/S'
+                 ,'Intermail Solutions']
+
+    Hvidbjerg_Bank_list = ['Hvidbjerg Bank'
+                      ,'Hvidbjerg Bank Aktieselskab'
+                      ,'Hvidbjerg Bank Holstebro'
+                      ,'HVIDBJERG BANK'
+                      ,'HVIDBJERG BANK A/S'
+                      ,'Hvidbjerg bank']
+
+    HusCompagniet_list = ['HusCompagniet A/S'
+                    ,'Huscompagniet Midt- og Nordjylland A/S'
+                     ,'HusCompagniet'
+                     ,'HusCompagniet Sjælland A/S'
+                     ,'HusCompagniet Midt- og Nordjylland A/S'
+                     ,'HusCompagniet Fyn A/S'
+                     ,'Huscompagniet Sjælland A/S'
+                     ,'Huscompagniet A/S'
+                     ,'HusCompagniet as'
+                     ,'HusCompagniet Midt- og Nordjylland'
+                     ,'HusCompagniet Sønderjylland as']
+
+    Harboes_Bryggeri_list = ['Harboes Bryggeri A/S'
+                          ,'HARBOES BRYGGERI A/S']
+
+    H_H_International_list = ['H+H International A/S'
+                         ,'H+H Danmark A/S'
+                         ,'H+H EJENDOMME A/S']
+
+    Gyldendal_list = ['Gyldendals Bogklubber'
+                 ,'Gyldendal A/S'
+                 ,'Gyldendal'
+                 ,'GYLDENDAL'
+                 ,'GYLDENDAL A/S'
+                 ,'Forlaget Gyldendal A/S'
+                 , 'Gyldendal Uddannelse'
+                 , 'Gyldendal Business'
+                 ,'Gyldendal Akademisk A/S'
+                 ,'Gyldendal Akademisk'
+                 ,'Gyldendal Digital']
+
+    Grønlandsbanken_list = ['Grønlandsbanken A/S'
+                 ,'Grønlandsbanken Qaqortoq afdeling'
+                 ,'GrønlandsBANKEN'
+                 ,'Grønlandsbanken'
+                 ,'GrønlandsBANKEN A/S']
+
+
+    GreenMobility_list = ['GreenMobility'
+                      ,'GreenMobility A/S'
+                     ,'Green Mobility A/S']
+
+    GN_Store_Nord_list = ['GN Store Nord',
+                     'GN Store Nord A/S',
+                     'GN STORE NORD A/S',
+                     'GN Store Nord as',
+                     'Gn Store Nord A/S'
+                     'GN AUDIO A/S', 'GN Audio A/S', 'GN Audio'
+                     'GN FalCom'
+                     'GN Hearing A/S', 'GN HEARING A/S', 'GN Hearing DK A/S', 'GN Hearing',
+                     'Dansk HøreCenter',
+                     'Dansk Hørecenter',
+                     'DANSK HØRETEKNIK A/S']
+
+    Glunz_and_Jensen_Holding_list = ['Glunz & Jensen A/S',
+    'Glunz & Jensen Microflex A/S',
+    'Glunz & Jensen',
+    'GLUNZ & JENSEN A/S',
+    'GLUNZ & JENSEN MICROFLEX A/S']
+
+    Genmab_list = ['Genmab A/S', 'Genmab', 'Genmab AS', 'Genmab A/S,']
+
+    Gabriel_Holding_list = ['GABRIEL A/S','Gabriel A/S','Gabriel'] 
+
+    G4S_plc_list = ['G4S Security Services A/S',
+    'G4S',
+    'G4S SECURITY SERVICES A/S',
+    'G4S Security Services',
+    'G4S SECURITY SERVICES A/S - Århus',
+    'G4S SECURITY SERVICES A/S Billetbetaling',
+    'G4S Vagt A/S',
+    'G4S Vagt',
+    'G4S vagt A/S',
+    'G4S Security Service A/S',
+    'G4S VAGT A/S']
+
+    Fynske_Bank_list = ['Fynske Bank A/S',
+    'Fynske Bank Nyborg Afd.',
+    'Fynske Bank Assens Afd.',
+    'Fynske Bank Fredericia Afd.',
+    'Fynske Bank',
+    'Fynske Bank Assens',
+    'Fynske Bank Børkop',
+    'Fynske Bank Svendborg',
+    'Leasing Fyn Bank A/S',
+    'Leasing Fyn',
+    'LEASING FYN BANK A/S',
+    'Leasing Fyn & Factoring Bankaktieselskab',
+    'LEASING FYN & FACTORING BANKAKTIESELSKAB',
+    'LEASING FYN & FACTORING BANKAKTIESELSKAB.']
+
+    Flügger_group_list = ['Flügger A/S','FLÜGGER FARVER',
+    'Flügger','Flügger Farver',
+    'Flügger farver Årslev',
+    'Flügger A/s',
+    'Flügger A/S, Salgsafdeling A086 Ringkøbing',
+    'FLÜGGER A/S, SALGSAFDELING',
+    'FLüGGER A/S, SALGSAFDELING',
+    'FLÜGGER A/S',
+    'Flügger farver',
+    'Flügger i Ørbæk v/Mette Marie Stokholm',
+    'FLÜGGER FARVER V/MALERMESTER PAUL ISVIK',
+    'Flügger HR',
+    'Flügger farver, Frank Kristensen, Ringparkens Butikstorv',
+    'Flügger farver A/S',
+    'FLÜGGER A/S SALGSAFDELING',
+    'Flügger Group',
+    'FLÜGGER A/S Salgsafdeling',
+    'Flügger farvehandel',
+    'FLÜGGER Farver']
+
+    FLSmidth_list = ['FLSmidth',
+    'FLSmidth, Inc.',
+    'FLSmidth Private Limited',
+    'FLSMIDTH & CO. A/S',
+    'FLSmidth & Co. A/S',
+    'flsmidth-inc',
+    'Flsmidth A/s',
+    'Flsmidth & Co. A/s',
+    'FLSmidth HAMBURG GmbH',
+    'FLSmidth A/S',
+    'FLSmidth Group Communications',
+    'Flsmidth A/S',
+    'FLSMIDTH A/S',
+    'FLSmidth Airtech',
+    'FLSmidth Airloq',
+    'FLSmidth Automation',
+    'FLSmidth Airloq A/S',
+    'FLSmidth Minerals A/S']
+
+    FirstFarms_list = ['FirstFarms A/S']
+
+    Fast_Ejendom_Danmark_list = ['Fast Ejendom Danmark A/S']
+
+    DSV_Panalpina_list = ['DSV',
+    'DSV Transport A/S',
+    'DSV Road A/S',
+    'DSV A/S',
+    'DSV Brøndby',
+    'DSV Esbjerg',
+    'DSV Miljø A/S',
+    'DSV Solutions',
+    'DSV Miljø',
+    'DSV Road',
+    'DSV Group IT',
+    'DSV Air & Sea A/S',
+    'DSV ROAD A/S',
+    'DSV Road Holding A/S',
+    'Støvring Biltransport DSV Road A/S',
+    'DSV Air & Sea',
+    'DSV Road A/S, Carlsberg',
+    'DSV TRANSPORT A/S',
+    'DSV Solutions A/S']
+
+
+    Drilling_Company_of_1972_list = ['Maersk Drilling A/S',
+    'Maersk Drilling',
+    'A.P. Møller - Mærsk A/S (Maersk Drilling)',
+    'Maersk Drilling Services A/S',
+    'Mærsk Drilling',
+    'A. P. Møller Mærsk Drilling',
+    'A.P. Møller - Mærsk - Drilling SAP',
+    'A.P. Møller - Mærsk - Drilling',
+    'Maersk Drilling Norge A/S',
+    'MÆRSK Drilling']
+
+    Djurslands_Bank = ['Djurslands Bank',
+    'Djurslands Bank A/S',
+    'DJURSLANDS BANK',
+    'DJURSLANDS BANK A/S ALLINGAABRO AFD.',
+    'DJURSLANDS BANK A/S GRENAA AFDELING',
+    'DJURSLANDS BANK A/S KOLIND AFDELING',
+    'DJURSLANDS BANK A/S']
+
+
+    DFDS_list = ['DFDS',
+    'DFDS A/S',
+    'DFDS AS',
+    'Dfdsseaways',
+    'DFDS Group',
+    'DFDS a/s',
+    'DFDS House',
+    'DFDS Canal Tours',
+    'DFDS Canal Tours A/S',
+    'DFDS Seaways A/S',
+    'DFDS Seaways',
+    'DFDS Transport A/S, dsv',
+    'DFDS TRANSPORT A/S',
+    'DFDS Transport A/S',
+    'DFDS CANAL TOURS A/S',
+    'DFDS Tor Line']
+
+    Demant_list = ['Demant',
+    'William Demant Group',
+    'William Demant',
+    'William Demant Holding A/S',
+    'WILLIAM DEMANT HOLDING A/S',
+    'William Demant Holding',
+        'Interacoustics A/S', 'INTERACOUSTICS A/S',
+          'Oticon',
+    'Oticon Medical',
+    'Oticon A/S',
+    'OTICON A/S',
+          'Audika',
+          'Bernafon', 'Bernafon - Phonic Ear A/S'
+    ]
+
+    Dantax_list = [
+    'Dantax Radio A/S',
+    'Dantax',
+    'Dantax Radio',
+    'Dantax Steuerberatungsgesellschaft mbH',
+    'Dantax Steuerberatungsgesellschaft mbh',
+    'DANTAX Steuerberatungsgesellschaft mbH']
+
+    Danske_Bank_list = ['Danske Bank',
+    'Danske Bank A/S',
+    'Danske Bank A/s',
+    'Danske Bank-koncernen',
+    'Danske Bank Group',
+    'DANSKE BANK A/S',
+    'Danske Bank IT',
+    'Danske Bank (.com)',
+    'Den Danske Bank A/S',
+    'Den Danske Bank','Danske Invest Administration A/S', 'Danske Invest',
+              'Realkredit Danmark','Realkredit Danmark A/S','home a/s','home a/s',
+    'Home A/S',
+    'Home A/s','Danica Pension','MobilePay', 'Mobilepay']
+
+
+    Danske_Andelskassers_Bank_list = ['Danske Andelskassers Bank A/S',
+    'Danske Andelskassers Bank AS',
+    'Danske Andelskassers Bank A/S - Augustenborg',
+    'Danske Andelskassers Bank',
+    'DANSKE ANDELSKASSERS BANK A/S']
+
+
+    D_S_Norden_list = ['Dampskibsselskabet NORDEN A/S',
+    'Dampskibsselskabet NORDEN',
+    'Dampskibsselskabet Norden A/S',
+    'DAMPSKIBSSELSKABET NORDEN A/S',
+
+                  'Norient Product Pool ApS']
+
+
+    Copenhagen_Capital_list = ['Copenhagen Capital A/S']
+
+
+    Columbus_list = ['Columbus A/S',
+    'Columbus Danmark A/S',
+    'Columbus',
+    'COLUMBUS A/S',
+    'Columbus A/s']
+
+    Coloplast_B_list = ['Coloplast A/S',
+    'Coloplast Danmark A/S',
+    'Coloplast',
+    'Coloplast Ltd',
+    'COLOPLAST A/S',
+    'Coloplast Denmark and Emerging Markets']
+
+
+    Chr_Hansen_Holding_list = ['Chr. Hansen Holding A/S']
+
+    ChemoMetec_list = ['ChemoMetec A/S', 'CHEMOMETEC A/S', 'Chemometech', 'Chemometec A/S']
+
+    cBrain_list = ['cBrain A/S',
+    'cBrain',
+    'CBrain A/S',
+    'CBRAIN',
+    'cBrain Technology',
+    'cBrain Technology Copenhagen']
+
+    Carlsberg_list = ['Carlsberg Danmark',
+    'Carlsberg Breweries A/S',
+    'Carlsberg Group',
+    'Carlsberg Group A/S',
+    'Carlsberg Danmark A/S',
+    'Visit Carlsberg',
+    'Carlsberg',
+    'Carlsberg Group Procurement AG',
+    'Carlsberg A/S Ejendomme',
+    'CARLSBERG EJENDOMME HOLDING A/S',
+    'Carlsberg Danmark AS',
+    'CARLSBERG BREWERIES A/S',
+    'Carlsbergfondet',
+    'Carlsberg IT A/S',
+    'CARLSBERG DANMARK A/S C/O PERSONALE',
+    'Carlsberg A/S',
+    'Carlsberg Group HR',
+    'Carlsberg Danmark A/S Tuborg FB/Terminal Vest/Fredericia',
+    'Carlsberg Danmarks',
+    'CARLSBERG Danmark A/S Depot Holstebro',
+    'CARLSBERG DANMARK A/S Depot Århus',
+    'CARLSBERG Danmark A/S Depot Næstved']
+
+    Brøndby_IF_list = ['Brøndby IF Arrangementer','Brøndbyernes IF'] # dobbeltjek
+
+    brdr_hartmann_list = ['Brødrene Hartmann A/S', 'Brødrene Hartmann', 'BRØDRENE HARTMANN A/S']
+
+    Brødrene_A_O_Johansen_list = ['Brødrene A & O Johansen A/S',
+    'Brødrene A&O Johansen A/S',
+    'Brødrene A. & O. Johansen A/S',
+    'Brødrene A&O Johansen',
+    'BRØDRENE A. & O. JOHANSEN A/S',
+    'Brødrene A & O Johansen A/S, Hovedstaden',
+    'Brødrene A. & O. Johansen A/s',
+    'AO - Brødrene A & O Johansen A/S',
+    'Brødrene A & O Johansen',
+    'Brødrene A & O Johansen A/S Nykøbing F',
+    'BRØDRENE A & O JOHANSEN A/S',
+    'Brødrene Ao Johansen',
+    ]
+
+
+
+    Boozt_list = ['Boozt Fashion',
+    'Boozt',
+    'Boozt Fashion AB',
+    'Boozt.com']
+
+    Boliga_Gruppen_list = ['Boliga Gruppen A/S','Boliga','Boliga ApS','Boliga Aps', 'Boliga.dk']
+
+    blue_vision_list = ['Contra A/S','CONTRA A/S','Contra - Hillerød',
+    'Contra - Helsingør','ConTra International','Contra - Viborg','ConTra Denmark','Contra','ConTra']
+
+    BioPorto_list = ['BioPorto A/S',
+    'BioPorto Diagnostics A/S',
+    'BioPorto Diagnostics',
+    'Bioporto Diagnostics A/S',
+    'BIOPORTO A/S',
+    'Bioporto A/S']
+
+    Bavarian_Nordic_list = ['Bavarian Nordic A/S', 'Bavarian Nordic', 'BAVARIAN NORDIC A/S']
+
+    BankNordik_list = ['BankNordik',
+    'P/F Banknordik',
+    'P/F Banknordik Lyngby',
+    'Banknordik',
+    'BANKNORDIK']
+
+    Bang_Olufsen_list = ['Bang & Olufsen A/S',
+    'Bang & Olufsen America Inc.',
+    'Bang & Olufsen a/s',
+    'Bang & Olufsen Operations',
+    'Bang & Olufsen Operations a/s','B&O PLAY']
+
+    Atlantic_Petroleum = ['Atlantic Petroleum P/F']
+
+    Ambu_list = ['Ambu A/S','Ambu',
+    'Ambu Denmark','Ambu A/s','AMBU A/S']
+
+
+    Alm_Brand_list = ['Alm. Brand',
+    'Alm. Brand A/S',
+    'Alm. Brand Forsikring A/S',
+    'Alm. Brand Forsikring A/s',
+    'Alm. Brand A/s',
+    'Alm. Brand Forsikring',
+    'Alm. Brand Bank A/S',
+    'Alm. Brand Leasing A/S',
+    'Alm. Brand Bank',
+    'Alm. Brand Markets',
+    'Alm. Brand Asset Management',
+    'Alm. Brand BANK',
+    'ALM. BRAND A/S',
+    'Alm. Brand Region Syd',
+    'ALM. BRAND FINANS A/S',
+    'ALM. BRAND BANK',
+    'ALM. Brand',
+    'Alm. Brand Finans',
+    'ALM. BRAND',
+    'Alm. Brand Henton',
+    'ALM. BRAND REGION SYD']
+
+
+    ALK_Abello_list =['ALK-Abelló A/S',
+    'Alk-Abelló A/S',
+    'ALK-Abelló',
+    'ALK-Abelló Arzneimittel GmbH',
+    'ALK-abelló','ALK Abello'
+    'ALK-Abello',
+    'Alk-Abello A/S',
+    'ALK-Abello A/S']
+
+    AGF_list = ['AGF A/S', 'AGF','AGF Fodbold','AGF Håndbold','AGF Svømning','AGF Tennis']
+
+    AaB_list = ['AaB esport', 'AaB A/S','Aalborg Boldspilklub A/S', 'AALBORG BOLDSPILKLUB AF 1885']
+
+    A_P_Møller_Mærsk_list = ['Mærsk Container Industri',
+    'Mærsk Container Industry A/S',
+    'A.P. Møller - Mærsk A/S',
+    'A.P. Møller - Mærsk A/S (Maersk Tankers)',
+    'A.P. Møller - Mærsk',
+    'A.P. Møller - Mærsk A/S (Maersk Drilling)',
+    'Mærsk Line',
+    'Maersk Group - A.P. Møller Mærsk',
+    'A.P. MØLLER - MÆRSK A/S',
+    'Mærsk Mc-Kinney Møller Videncenter',
+    'A.P. Møller-Mærsk',
+    'MÆRSK OLIE OG GAS A/S',
+    'Mærsk',
+    'Mærsk Drilling',
+    'A. P. Møller Mærsk SAP',
+    'A. P. Møller Mærsk Supply Service',
+    'A. P. Møller Mærsk FPSOs',
+    'A. P. Møller-Mærsk',
+    'A. P. Møller Mærsk Oil Gas',
+    'A.P. Møller Mærsk Line',
+    'A. P. Møller Mærsk Damco',
+    'Mærsk Olie og Gas AS',
+    'Mærsk Oil Trading',
+    'Mærsk Olie og Gas A/S (Esbjerg)',
+    'A. P. Møller Mærsk Headquarters',
+    'A. P. Møller Mærsk Tankers',
+    'A. P. Møller Mærsk LNG',
+    'Mærsk Oil',
+    'Mærsk Olie og Gas',
+    'Mærsk Tankers',
+    'A.P. Møller Mærsk',
+    'A.P. Møller - Mærsk Gruppen',
+    'MÆRSK OLIE OG GAS',
+    'A.P. Møller - Mærsk - Headquarters',
+    'A.P. Møller - Mærsk - Oil Gas',
+    'A.P. Møller - Mærsk - Line',
+    'A.P. Møller - Mærsk - Drilling',
+    'A.P. Møller - Mærsk - Ship Management',
+    'Mærsk A/S',
+    'A. P. Møller Mærsk',
+    'A.P. Møller - Mærsk - Damco',
+    'A.P. Møller - Mærsk - Tankers',
+    'A.P. Møller - Mærsk - Oil gas',
+    'A.P.Møller-Mærsk',
+    'A. P. Møller - Mærsk A/S',
+    'Mærsk Olie og GAS AS',
+    'A. P. Møller Mærsk Container Industry',
+    'Mærsk Line (Container Business)',
+    'Mærsk Oil Qatar',
+    'A.P. Møller-Mærsk Gruppen',
+    'Mærsk Container Industri AS',
+    'Mærsk Olie og Gas A/S',
+    'AP Møller-Mærsk A/S',
+    'A.P. Møller - MÆRSK OLIE OG GAS A/S',
+    'Mærsk Contractors',
+    'Maersk Oil, Mærsk Olie og Gas',
+    'MÆRSK CONTAINER INDUSTRI A/S',
+    'Mærsk Olie & Gas A/S',
+
+    'A.P. Møller ? Maersk A/S',
+    'A.P. Møller - Maersk A/S',
+    'Maersk Container Industry (MCI)',
+    'Maersk Supply Service',
+    'Maersk Tankers',
+    'Maersk Broker',
+    'Maersk Training A/S',
+    'A.P. Møller - Mærsk A/S (Maersk Tankers)',
+    'Maersk Line',
+    'Maersk',
+    'A.P. Møller \x96 Maersk A/S',
+    'Maersk Oil Trading',
+    'A.P. Møller ? Maersk',
+    'Sealand ? A Maersk Company',
+    'Maersk Management Consulting',
+    'Maersk Drilling',
+    'Maersk Procurement',
+    'Maersk Oil',
+    'Maersk Management Consulting, A.P. Moller',
+    'MAERSK CONTAINER INDUSTRY A/S',
+    'Maersk Digital',
+    'MAERSK',
+    'Maersk Line A/S',
+    'A.P. Møller Maersk A/S',
+    'A.P. Moeller - Maersk A/S',
+    'A.P. Møller - Maersk',
+    'Maersk Group Functions'
+    'Maersk Training',
+    'Maersk Oil Trading Lubricants',
+    ' Maersk Oil Trading',
+    ' Maersk Management Consulting',
+    'Maersk Group - A.P. Møller Mærsk',
+    'Maersk Training Svendborg',
+    'Maersk Group',
+    'Maersk Maritime Technology',
+    'Maersk FPSOs',
+    'Maersk Line ',
+    'Maersk H2S Safety Services',
+    'Maersk Training Esbjerg',
+    'Maersk FPSO',
+    'Maersk In-house Consulting',
+    'MAERSK TRAINING SVENDBORG A/S',
+    'MAERSK LINE',
+    'Maersk Container Industry',
+    'A.P. Moller - Maersk',
+    'Maersk Fluid Technology',
+    'Maersk A/S',
+    'AP MOLLER MAERSK',
+    'Maersk Training Svendborg A/S',
+    'Maersk Broker Agency',
+    'Maersk Oil A/S',
+    'Maersk Drilling Services A/S',
+    'A.P. Moller - Maersk A/S',
+    'Maersk Broker K/S',
+    'MAERSK TRAINING ESBJERG A/S',
+    'MAERSK OIL',
+    'K.T. Maersk-Net v/ Tino Kristian Mærsk',
+    'Maersk Supply Service A/S',
+    'A.P. Moller/Maersk',
+    'A.P. Moller - Maersk Group',
+    'Maersk Tankers A/S',
+    'A. P. Møller Maersk',
+    'Maersk Oil Trading A/S',
+    'Maersk Training Centre, Esbjerg',
+    'Maersk Training Centre',
+    'PSDM Modell Builder - Maersk Oil',
+    'Maersk Container Industry AS',
+    'Maersk Training, Svendborg',
+    'Maersk Broker K/S Agency',
+    'Maersk Maritime Officer',
+    'Maersk LNG',
+    'A.P. Møller Maersk',
+    'Maersk Container Industry AS (MCI)',
+    'Maersk Group - Corporate Headoffice',
+    'MAERSK BROKER K/S',
+    'Maersk Logistisk/Damco',
+    'Maersk Ship Management',
+    'Maersk Container Industri AS',
+    'A.P. Moller-Maersk Group',
+    'MAERSK TRAINING CENTRE A/S',
+    'Maersk Procurement Singapore',
+    'Maersk Tankers & Maersk Oil Trading',
+    'Maersk Crew Management',
+    'A.P M ¸ller Maersk',
+    'A.P. Moller Maersk Group',
+    'A. P. Moller - Maersk Group',
+    'Maersk Logistics',
+    'K.T. Maersk-Net v/ Kristian Tino Mærsk',
+    'Maersk Training Centre A/S',
+    'Maersk Contractors',
+    'A.P.Moller-Maersk',
+    'Maersk MITAS',
+    'Maersk Contractors Norge AS',
+    'A.P.Moller-Maersk Group',
+    'Maersk Oil Qatar AS',
+    'Maersk Drilling Norge A/S',
+    'Maersk Training Centre A / S',
+    'Maersk Oil, Mærsk Olie og Gas',
+    'Maersk Line, Maersk Logistics',
+    'Maersk Line og Maersk Logistics i Århus',
+    'Maersk Oil Qatar as',
+    'Maersk Broker A/S',
+    'Maersk Line and Maersk Logistics',
+    'A.P. Møller-Maersk Group',
+    'esbjerg@maerskoil.dk',
+    'Maersk Oil Qatar A/S',
+    'Maersk Construction Consultants']
+
     list_of_names = ['Ørsted', 'Zealand Pharma', 'Vestjysk Bank', 'Vestas Wind Systems', 'Tryg', 'Totalbanken', 'TORM A', 'Topdanmark', 'Tivoli A/S', 'TCM Group', 'Sydbank', 
     'Sparekassen Sjælland-Fyn', 'Spar Nord Bank', 'SP Group', 'Solar B', 'Skjern Bank', 'SKAKO', 'Schouw & Co.', 'Scandinavian Tobacco Group', 'Scandinavian Brake Systems',
     'SAS', 'Sanistål', 'RTX', 'Royal UNIBREW', 'Rovsing', 'Rockwool Int. B', 'Roblon B', 'Ringkjøbing Landbobank', 'Rias B', 'Per Aarsleff Holding B',
     'Park Street Nordicom A', 'Pandora', 'Orphazyme', 'Novo Nordisk B', 'NTR Holding B', 'NTG Nordic Transport Group', 'Novozymes B', 'North Media', 'Nordfyns Bank',
     'Nordea Bank Abp','NNIT', 'NKT', 'Nilfisk Holding', 'Netcompany Group', 'Møns Bank', 'MT Højgaard Holding', 'Migatronic B', 'Matas', 'Lån og Spar Bank', 'Luxor B',
-    'Lundbeck', 'Lollands Bank']
-
+    'Lundbeck', 'Lollands Bank', "Københavns Lufthavne",'Kreditbanken',"JyskeBank",'Jutlander Bank','Jeudan','ISS',"InterMail",'Hvidbjerg Bank','HusCompagniet','Harboes Bryggeri B',
+                'H+H International','Gyldendal B','Grønlandsbanken','GreenMobility','GN Store Nord','Glunz & Jensen Holding','Genmab','Gabriel Holding'
+                ,'G4S plc','Fynske Bank','Flügger group B','FLSmidth & Co.','FirstFarms','Fast Ejendom Danmark','DSV Panalpina','Drilling Company of 1972',
+                'Djurslands Bank','DFDS','Demant','Dantax','Danske Bank','Danske Andelskassers Bank','D/S Norden','Copenhagen Capital','Columbus','Coloplast B',
+                'Chr. Hansen Holding', 'ChemoMetec','CBRAIN','Carlsberg','Brøndby IF','Brdr.Hartmann','Brdr. A & O Johansen præf.','Boozt','Boliga Gruppen',
+                'Blue Vision A','BioPorto','Bavarian Nordic','BankNordik','Bang & Olufsen','Atlantic Petroleum','Ambu','Alm. Brand','ALK-Abelló B','AGF B',
+                'AaB','A.P. Møller - Mærsk B']
+    
     list_of_lists = [oersted_list, zealand_pharma_list, vestjysk_list, vestas_list, tryg_list, totalbanken_list, torm_list, topdanmark_list, tivoli_list, tcm_list, sydbank_list,
     sparekassen_list, sparnord_list, sp_group_list, solar_list, skjern_list, skako_list, schouw_list, scandinavian_list, brakesystem_list, sas_list, sani_list, rtx_list,
     royal_list, rovsing_list, rockwool_list, roblon_list, ringbank_list, rias_list, aarslef_list, nordicom_list, pandora_list, orphazyme_list, novo_list,ntr_list,
     ntg_list, novozym_list, northmedia_list, nordfyns_list, nordea_list, nnit_list, NKT_list,nilfisk_list, netcompany_list, mon_bank_list, mt_hojgaard_list,miga_list, matas_list,
-    laan_spar_list,luxor_list, lundbeck_list, lolland_list]
+    laan_spar_list,luxor_list,lundbeck_list,lolland_list,Københavns_Lufthavne_list,Kreditbanken_list,Jyske_Bank_list,Jutlander_Bank_list,Jeudan_list,ISS_list,InterMail_list,Hvidbjerg_Bank_list,HusCompagniet_list,
+                Harboes_Bryggeri_list,H_H_International_list,Gyldendal_list,Grønlandsbanken_list, GreenMobility_list,GN_Store_Nord_list,Glunz_and_Jensen_Holding_list,
+                Genmab_list,Gabriel_Holding_list,G4S_plc_list,Fynske_Bank_list,Flügger_group_list,FLSmidth_list,FirstFarms_list,Fast_Ejendom_Danmark_list,DSV_Panalpina_list,
+                Drilling_Company_of_1972_list,Djurslands_Bank,DFDS_list,Demant_list,Dantax_list,Danske_Bank_list,Danske_Andelskassers_Bank_list,D_S_Norden_list,Copenhagen_Capital_list,
+                Columbus_list,Coloplast_B_list,Chr_Hansen_Holding_list,ChemoMetec_list,cBrain_list ,Carlsberg_list,Brøndby_IF_list,brdr_hartmann_list,Brødrene_A_O_Johansen_list,Boozt_list,
+                Boliga_Gruppen_list,blue_vision_list,BioPorto_list,Bavarian_Nordic_list,BankNordik_list,Bang_Olufsen_list,Atlantic_Petroleum,Ambu_list,Alm_Brand_list,
+                ALK_Abello_list,AGF_list,AaB_list]
 
     list_of_dfs = []
     
